@@ -27,6 +27,17 @@ class MessageStore {
         this._messages = [];
     }
 
+    messages_to_json(messages){
+        let response = '[';
+        for (let i = 0; i < messages.length - 1; i++) {
+            response += message[0].to_json() + ',';
+        }
+        if(messages.length > 0){
+            response += messages[messages.length - 1].to_json()
+        }
+        response += ']';
+        return response;
+    }
 }
 
 module.exports = MessageStore;
