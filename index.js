@@ -41,6 +41,9 @@ app.get('/users/:username/messages', function (req, res) {
     for (let i = 0; i < messages.length - 1; i++) {
         response += message[0].to_json() + ',';
     }
+    if(messages.length > 0){
+        response += messages[messages.length - 1].to_json()
+    }
     response += ']';
     res.setHeader('Content-Type', 'application/json');
     res.status(200).send(response);
