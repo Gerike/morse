@@ -11,7 +11,7 @@ class UserStore {
         return new UserStore();
     }
 
-    create_user(username, name) {
+    _create_user(username, name) {
         const user = new User(this._next_free_id, username, name);
         this._users.push(user);
         this._next_free_id += 1;
@@ -22,7 +22,7 @@ class UserStore {
         if (this.is_user_exist(username))
             throw Errors.USERNAME_ALREADY_USED;
         else
-            return this.create_user(username, name);
+            return this._create_user(username, name);
     }
 
     get_user(identifier, value) {
