@@ -1,0 +1,23 @@
+{
+  "name": "morse",
+  "version": "1.0.0",
+  "description": "A web application which you can use to send morse messages to another logged in user",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "mocha ./tests --recursive",
+    "dev": "nodemon index.js"
+  },
+  "author": "Kovacs Gergo",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.15.2",
+    "express": "^4.14.0"
+  },
+  "devDependencies": {
+    "nodemon": "^1.11.0",
+    "supertest": "^2.0.1",
+    "chai": "^3.5.0",
+    "mocha": "^3.2.0"
+  }
+}

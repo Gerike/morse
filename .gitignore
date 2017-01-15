@@ -1,0 +1,5 @@
+# Ignoring everything inside Webstorm IDE local settings
+.idea/
+
+# Ignoring everything inside Node Modules
+node_modules/
