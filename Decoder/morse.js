@@ -1,43 +1,44 @@
 'use strict';
 
-const code_table = require('./code_table');
-const service_codes = require('./service_codes');
+const codeTable = require('./code_table');
+const serviceCodes = require('./service_codes');
 
 class Morse {
 
-    static decode(morse_message) {
-        let message_words = [];
-        const morse_words = this.get_words(this.trim_morse_message(morse_message));
-        for (const morse_word of morse_words) {
-            message_words.push(this.convert_word(morse_word));
+    static decode(morseMessage) {
+        let messageWords = [];
+        const morseWords = this.getWords(this.trimMorseMessage(morseMessage));
+        for (const morseWord of morseWords) {
+            messageWords.push(this.convertWord(morseWord));
         }
-        return message_words.join(' ');
+        return messageWords.join(' ');
     }
 
-    static trim_morse_message(morse_message) {
-        return morse_message.trim()
+    static trimMorseMessage(morseMessage) {
+        return morseMessage.trim()
     }
 
-    static get_words(morse_message) {
-        return morse_message.split('   ');
+    static getWords(morseMessage) {
+        return morseMessage.split('   ');
     }
 
-    static convert_expression(morse_expression) {
-        if (morse_expression in service_codes)
-            return service_codes[morse_expression];
-        else if (morse_expression in code_table)
-            return code_table[morse_expression];
-        else
-            return '';
-    }
 
-    static convert_word(morse_word) {
+    static convertWord(morseWord) {
         let word = '';
-        const expressions = morse_word.split(' ');
+        const expressions = morseWord.split(' ');
         for (const exp of expressions) {
-            word += this.convert_expression(exp);
+            word += this.convertExpression(exp);
         }
         return word;
+    }
+
+    static convertExpression(morseExpression) {
+        if (morseExpression in serviceCodes)
+            return serviceCodes[morseExpression];
+        else if (morseExpression in codeTable)
+            return codeTable[morseExpression];
+        else
+            return '';
     }
 }
 
