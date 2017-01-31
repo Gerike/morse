@@ -1,5 +1,5 @@
-const User = require('./user');
-const Errors = require('./errors');
+const User = require('./../Model/user');
+const Errors = require('./../errors');
 
 class UserStore {
     constructor() {

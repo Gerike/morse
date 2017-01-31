@@ -1,6 +1,6 @@
 'use strict';
 
-const Errors = require('./errors');
+const Errors = require('./../errors');
 
 class User {
     constructor(id, username, name) {

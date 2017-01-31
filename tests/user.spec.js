@@ -1,7 +1,7 @@
 'use strict';
 
 const expect = require('chai').expect;
-const User = require('../user');
+const User = require('../Model/user');
 const Errors = require('../errors');
 
 describe('User', () => {

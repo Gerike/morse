@@ -1,9 +1,9 @@
 'use strict';
 
 const Errors = require('./errors');
-const MessageStore = require('./message_store').create();
-const SessionStore = require('./session_store').create();
-const UserStore = require('./user_store').create();
+const MessageStore = require('./MessageStore/message_store').create();
+const SessionStore = require('./SessionStore/session_store').create();
+const UserStore = require('./UserStore/user_store').create();
 const bodyParser = require('body-parser');
 
 let express = require('express');

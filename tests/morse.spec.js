@@ -1,7 +1,7 @@
 'use strict';
 
 const expect = require('chai').expect;
-const Morse = require('../morse');
+const Morse = require('../Decoder/morse');
 
 describe('Morse', () => {
     describe('decode messages', () => {

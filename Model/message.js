@@ -1,6 +1,6 @@
 'use strict';
 
-const Morse = require('./Morse');
+const Morse = require('./../Decoder/morse');
 
 class Message {
     constructor(sender, recipient, morse) {

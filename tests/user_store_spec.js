@@ -1,7 +1,7 @@
 'use strict';
 
 const expect = require('chai').expect;
-const UserStore = require('../user_store').create();
+const UserStore = require('../UserStore/user_store').create();
 const Errors = require('../errors');
 
 describe('User Store', () => {

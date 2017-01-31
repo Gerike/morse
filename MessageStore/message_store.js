@@ -1,6 +1,6 @@
 'use strict';
 
-const Message = require('./message');
+const Message = require('./../Model/message');
 
 class MessageStore {
     constructor() {

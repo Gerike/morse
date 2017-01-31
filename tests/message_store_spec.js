@@ -1,9 +1,9 @@
 'use strict';
 
 const expect = require('chai').expect;
-const Message = require('../message');
-const User = require('../user');
-const MessageStore = require('../message_store').create();
+const Message = require('../Model/message');
+const User = require('../Model/user');
+const MessageStore = require('../MessageStore/message_store').create();
 
 describe('Message Store', () => {
     const user1 = new User(1, 'bob', 'Bob');

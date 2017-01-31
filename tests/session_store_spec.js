@@ -1,8 +1,8 @@
 'use strict';
 
 const expect = require('chai').expect;
-const SessionStore = require('../session_store').create();
-const User = require('../user');
+const SessionStore = require('../SessionStore/session_store').create();
+const User = require('../Model/user');
 const Errors = require('../errors');
 
 describe('Session Store', () => {
